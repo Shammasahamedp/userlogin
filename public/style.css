@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/assests/image.avif');
+    background-size: cover;
+    background-repeat: center fixed no-repeat;
+}
+
+.font-weight-bold {
+    color: azure;
+}
+
+.span {
+    color: azure;
+}
+
+.center-div {
+    padding-top: 10%
+}
+
+.btn.btn-success {
+    padding: .4em 2em
+}
+
+form {
+    padding: 0 3em
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.form-control {
+    padding: 10px;
+}
+
+#login.title>span {
+    font-size: .8em
+}
+
+#sm {
+    color: rgb(122, 124, 124);
+}
+
+button {
+    margin-top: 5%;
+}
+
+.span1 {
+    display: block;
+    color: rgb(174, 248, 248);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}

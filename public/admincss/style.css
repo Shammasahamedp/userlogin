@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(simple-background-with-gradient-shape-green-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 25%;
+}

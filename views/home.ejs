@@ -1,0 +1,15 @@
+<%-include('header')-%>
+    <div class="text-center cent mt-5" id="login">
+        <div class="container w-25 border py-5 mt-5">
+            <h3 class="span">
+                Welcome to the Home Page
+            </h3>
+            <h5 class="span">
+                <%=locals.user?user:'User'%>
+            </h5>
+            <a href="/home/edit" class="span">Edit</a>
+            <a href="/logout" class="span1">Logout</a>
+
+        </div>
+    </div>
+    <%-include('footer')-%>
