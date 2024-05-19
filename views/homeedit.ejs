@@ -30,36 +30,46 @@
     <script>
         function validateForm(event) {
             event.preventDefault();
+            console.log("what is the problem bro..");
             const email = document.getElementById('email').value;
             const name = document.getElementById('name').value;
-            // const password = document.getElementById('password').value
-            const phone = document.getElementById('phone').value
+            const password = document.getElementById('password').value;
+            const phone = document.getElementById('phone').value;
+    
             if (!isValidEmail(email)) {
-                alert('Please enter a valid email address.')
-                return
+                alert('Please enter a valid email address.');
+                return;
             }
             // if (password.length < 6) {
-            //     alert('Password must be atleast 6 characters long.')
-            //     return
+            //     alert('Password must be at least 6 characters long.');
+            //     return;
             // }
             if (!isValidName(name)) {
-                alert('Name must contain only alphebetic charecters')
-                return
+                alert('Name must contain only alphabetic characters.');
+                return;
             }
-            if (phone.length !== 10) {
-                alert('Phone number must be exactly 10 digits long.')
-                return
+            if (!isValidPhone(phone)) {
+                alert('Phone number must be exactly 10 digits long and cannot start with 0 or consist of all zeros.');
+                return;
             }
-            document.getElementById('registrationform').submit()
+    
+            document.getElementById('registrationform').submit();
         }
+    
         function isValidEmail(email) {
             const emailRegex = /^[^\s@]+@gmail\.com$/;
             return emailRegex.test(email);
         }
-
+    
         function isValidName(name) {
             const nameRegex = /^[A-Za-z]+$/;
-            return nameRegex.test(name)
+            return nameRegex.test(name);
+        }
+    
+        function isValidPhone(phone) {
+            const phoneRegex = /^[1-9][0-9]{9}$/;
+            return phoneRegex.test(phone) && !/^(0+)$/.test(phone);
         }
     </script>
+    
     <% include('footer') %>
