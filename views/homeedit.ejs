@@ -15,15 +15,15 @@
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" value="<%= user.email %>" required>
             </div>
-            <!-- <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" value="<%= user.password %>"
-                    required>
-            </div> -->
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone</label>
                 <input type="text" class="form-control" id="phone" name="phone" value="<%= user.phone %>">
             </div>
+            <% if(locals.exists){%>
+                <div class="text-danger">
+                   <%= exists %>
+                </div>
+                <%}%>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
@@ -33,17 +33,13 @@
             console.log("what is the problem bro..");
             const email = document.getElementById('email').value;
             const name = document.getElementById('name').value;
-            const password = document.getElementById('password').value;
             const phone = document.getElementById('phone').value;
     
             if (!isValidEmail(email)) {
                 alert('Please enter a valid email address.');
                 return;
             }
-            // if (password.length < 6) {
-            //     alert('Password must be at least 6 characters long.');
-            //     return;
-            // }
+           
             if (!isValidName(name)) {
                 alert('Name must contain only alphabetic characters.');
                 return;

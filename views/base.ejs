@@ -6,11 +6,7 @@
                Login
             </h2>
             <span class="span">Login for the existing user</span>
-            <% if(locals.logout){%>
-               <div class="alter alert-success text-center span">
-                  <%= logout %>
-               </div>
-               <%}%>
+
          </div>
          <form action="/login" method='POST' class="pt-3 ">
             <div class="form-group">
@@ -25,8 +21,24 @@
                   <%=err%>
                </p>
                <%}%>
-                  <button type="submit" class="btn btn-success">Submit</button>
+                  <%if(locals.logout){%>
+                     <p class="text-success">
+                        <%=logout%>
+                     </p>
+                     <%}%>
+                        <% if(locals.signup){%>
+                           <div class="text-success">
+                              <%= signup %>
+                           </div>
+                           <%}%>
+                           <% if(locals.exists){%>
+                              <div class="text-danger">
+                                 <%= exists %>
+                              </div>
+                              <%}%>
+                              <button type="submit" class="btn btn-success">Submit</button>
          </form>
+
          <p class="span">dont have an account? </p><a href="/signup">Sign up</a>
 
 

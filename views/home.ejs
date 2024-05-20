@@ -7,6 +7,11 @@
             <h5 class="span">
                 <%=locals.user?user:'User'%>
             </h5>
+            <% if(locals.success){%>
+                <div class="text-success">
+                   <%= success %>
+                </div>
+                <%}%>
             <a href="/home/edit" class="span">Edit</a>
             <a href="/logout" class="span1">Logout</a>
 
